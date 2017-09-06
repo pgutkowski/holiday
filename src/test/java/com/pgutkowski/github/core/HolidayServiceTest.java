@@ -64,7 +64,7 @@ public class HolidayServiceTest {
     public void testGetUpcomingHolidays(){
         SameDayHolidays holidaysForCountries = testedService.findUpcomingSameDayHolidaysForCountries(
                 "PL", "US", LocalDate.of(2000, 2, 12)
-        );
+        ).get();
 
         assertThat(holidaysForCountries.getDate(), equalTo(BOTH_2000_08));
         assertThat(holidaysForCountries.getName1(), equalTo(BOTH_2000_08.toString()));
@@ -75,7 +75,7 @@ public class HolidayServiceTest {
     public void testGetUpcomingHolidaysNextYear(){
         SameDayHolidays holidaysForCountries = testedService.findUpcomingSameDayHolidaysForCountries(
                 "PL", "US", LocalDate.of(2000, 12, 12)
-        );
+        ).get();
 
         assertThat(holidaysForCountries.getDate(), equalTo(BOTH_2001_08));
         assertThat(holidaysForCountries.getName1(), equalTo(BOTH_2001_08.toString()));

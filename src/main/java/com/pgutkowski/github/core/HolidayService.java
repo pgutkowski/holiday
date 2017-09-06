@@ -21,7 +21,7 @@ public class HolidayService {
         this.holidayRepository = holidayRepository;
     }
 
-    public SameDayHolidays findUpcomingSameDayHolidaysForCountries(String countryLeft,
+    public Optional<SameDayHolidays> findUpcomingSameDayHolidaysForCountries(String countryLeft,
                                                                    String countryRight,
                                                                    LocalDate date
     ){
@@ -57,7 +57,7 @@ public class HolidayService {
             year = year.plusYears(1);
         }
 
-        return sameDayHolidays;
+        return Optional.ofNullable(sameDayHolidays);
     }
 
     private SameDayHolidays findSameDateUpcomingHolidays(LocalDate sinceDate,
