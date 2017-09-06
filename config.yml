@@ -1,0 +1,9 @@
+logging:
+  level: INFO
+  loggers:
+    com.github.pgutkowski: DEBUG
+
+#Api key to https://holidayapi.com/, loaded at startup but can be changed in runtime
+apiKey: 0378cc71-3e26-4d59-9e18-1a7b13c783cd
+
+holidayUri: https://holidayapi.com/v1/holidays
