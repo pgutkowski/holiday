@@ -22,3 +22,4 @@ Assumptions
 
 - if multiple holidays occur in same day in country, only one of them is returned
 - lookup is performed max 100 years ahead
+- only historical data is used, so holidayapi responses can be cached without expiration time 
